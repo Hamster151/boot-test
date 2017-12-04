@@ -12,6 +12,7 @@ import pl.com.tg.test.service.IUserService;
 public class TestApplication {
 
     public static void main(String[] args) {
+		// Test comment for branch
         SpringApplication.run(TestApplication.class, args);
     }
 
