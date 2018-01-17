@@ -1,7 +1,10 @@
 node {
 	stage('Checkout') {
-		def scmVars = checkout scm
-        	def branch = scmVars.GIT_BRANCH
+		scmVars = checkout scm
+		echo scmVars
+        	branch = scmVars.GIT_BRANCH
 		echo branch
+		branchName = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
+		echo branchName
 	}	
 }
